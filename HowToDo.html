@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media UI</title>
+</head>
+<body>
+    <center>
+        <h1><b>Social Media UI - Facebook</b></h1>
+    </center>
+
+    step1)lets create an index.html file in SocialMediaUI folder anlong with style.css file and import that in index.html
+
+    step2)creating navbar 
+    <!--
+    navbar
+    <nav>
+        <div class="n-left">
+            <img src="./images/logo.png" class="logo" alt="">
+            <ul>
+                <li><img src="./images/notification.png" alt=""></li>
+                <li><img src="./images/inbox.png" alt=""></li>
+                <li><img src="./images/video.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="n-right">
+            <div class="search-box">
+                <img src="./images/search.png" alt="">
+                <input type="text" name="Search" placeholder="Search...">
+            </div>
+            <div class="n-usericon online">
+                <img src="./images/profile-pic.png" alt="">
+            </div>
+        </div>
+    </nav>
+    -->
+
+    <!--
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    background-color: #efefef;
+}
+
+/* navbar styles */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1876f2;
+    padding: 5px 5%;
+}
+
+.logo{
+    width: 160px;
+    margin-right: 50px;
+}
+
+.n-left,
+.n-right{
+    display: flex;
+    align-items: center;
+}
+
+.n-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.n-left ul li img{
+    width: 25px;
+    margin: 0px 15px;
+}
+
+.n-usericon{
+    margin-left: 30px;
+}
+
+.n-usericon img{
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-box{
+    background-color: #efefef;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.search-box img{
+    width: 20px;
+}
+
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+
+.online{
+    position: relative;
+}
+
+.online:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-color: #1876f2;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+    -->
+
+    step3)doing another sidebar 
+    this is for left main(center), right
+    spearing so that we can code better 
+    <!--
+         <div class="container">
+        <div class="l-sidebar"></div>
+        <div class="main-sidebar"></div>
+        <div class="r-sidebar"></div>
+    </div>
+    -->
+    <!--
+        .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.l-sidebar{
+    background-color: #cbdffa;
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+.main-sidebar{
+    flex-basis: 48%;
+}
+
+.r-sidebar{
+    background-color: #cbdffa;
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    height: 100vh;
+}
+    -->
+
+    step4)creating left sidebar 
+    <!--
+        <div class="container">
+
+        <div class="l-sidebar">
+            <div class="imp-links">
+                <a href="#"><img src="./images/news.png" alt="">Latest News</a>
+                <a href="#"><img src="./images/friends.png" alt="">Friends</a>
+                <a href="#"><img src="./images/group.png" alt="">Group</a>
+                <a href="#"><img src="./images/marketplace.png" alt="">Marketplace</a>
+                <a href="#"><img src="./images/watch.png" alt="">Watch</a>
+                <a href="#">See More</a>
+            </div>
+            <div class="shortcut-link">
+                <p>Your Shortcuts</p>
+                <a href="#"><img src="./images/shortcut-1.png" alt="">Web Developers</a>
+                <a href="#"><img src="./images/shortcut-2.png" alt="">Blockchain</a>
+                <a href="#"><img src="./images/shortcut-3.png" alt="">Data Science</a>
+                <a href="#"><img src="./images/shortcut-4.png" alt="">Andriod Developers</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="main-sidebar"></div>
+        <div class="r-sidebar"></div>
+
+    </div>
+    -->
+    <!--
+        /* creatring left sidebar */
+
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+
+.imp-links a,
+.shortcut-link a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #626262;
+    width: fit-content;
+}
+
+.imp-links a img{
+    width: 25px;
+    margin-right: 15px;
+}
+
+.imp-links a:last-child{
+    color: #1876f2;
+}
+
+.shortcut-link p{
+    margin: 20px 0px;
+    color: #1876f2;
+}
+
+.shortcut-link a img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+    -->
+
+    step5)creating right sidebar
+    <!--
+        <div class="r-sidebar">
+            <div class="s-title">
+                <h3>Events</h3>
+                <a href="#">See All</a>
+            </div>
+
+            <div class="event">
+                <div class="l-event">
+                    <h3>20</h3>
+                    <span>Feburary</span>
+                </div>
+                <div class="r-event">
+                    <h4>Social Media</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Shubhaaam Tech Park</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="l-event">
+                    <h3>21</h3>
+                    <span>Feburary</span>
+                </div>
+                <div class="r-event">
+                    <h4>Content Creation</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Shubhaaam Tech Park</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+
+            <div class="s-title">
+                <h3>Advertisments</h3>
+                <a href="#">Close</a>
+            </div>
+            <img src="./images/advertisement.png" class="s-ads" alt="">
+
+            
+            <div class="s-title">
+                <h3>Messages</h3>
+                <a href="#">Hide Chats</a>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/member-2.png" alt="">
+                </div>
+                <p>Unknown</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/member-3.png" alt="">
+                </div>
+                <p>Unknown</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/member-4.png" alt="">
+                </div>
+                <p>Unknown</p>
+            </div>
+
+        </div>
+    -->
+
+    <!--
+        /* sidebar right side */
+
+.s-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.s-title h3{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.s-title a{
+    text-decoration: none;
+    color: #1876f2;
+}
+
+.event{
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.l-event{
+    border-radius: 10px;
+    height: 60px;
+    width: 80px;
+    margin-right: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.2);
+}
+
+.event p{
+    font-size: 15px;
+}
+
+.event a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #1876f2;
+}
+
+.l-event span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1876f2;
+    color: #fff;
+    font-size: 15px;
+    padding: 3px 0;
+}
+
+.s-ads{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.online-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.online-list .online{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.online-list .online::after{
+    top: unset;
+    bottom: 0;
+}
+
+.online-list .online img{
+    width: 50px;
+    border-radius: 50%;
+}
+    -->
+
+    step7)making of main content
+    <!--
+        <div class="main-sidebar">
+
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="./images/upload.png" alt="">
+                    <p>Post Story</p>
+                </div>                        
+                <div class="story story2">
+                    <img src="./images/member-1.png" alt="">
+                    <p>Unknown</p>
+                </div>           
+                <div class="story story3">
+                    <img src="./images/member-2.png" alt="">
+                    <p>Unknown</p>
+                </div>
+                <div class="story story4">
+                    <img src="./images/member-3.png" alt="">
+                    <p>Unknown</p>
+                </div>
+                <div class="story story5">
+                    <img src="./images/member-4.png" alt="">
+                    <p>Unknown</p>
+                </div>
+            </div>
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Shubham Date</p>
+                        <small>Public <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea placeholder="What's on your mind, Shubham...?" rows="3"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="./images/live-video.png" alt=""> Video</a>
+                        <a href="#"><img src="./images/photo.png" alt=""> Photo</a>
+                        <a href="#"><img src="./images/feeling.png" alt=""> Feelings</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/profile-pic.png" alt="">
+                        <div>
+                            <p>Shubham Date</p>
+                            <span>Feb 17 2022, 12:00 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                <img src="./images/feed-image-1.png" class="post-img" alt="">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                        <div><img src="./images/comments.png" alt=""> 10+</div>
+                        <div><img src="./images/share.png" alt=""> 53+</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/profile-pic.png" alt="">
+                        <div>
+                            <p>Shubham Date</p>
+                            <span>Feb 17 2022, 12:00 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                <img src="./images/feed-image-2.png" class="post-img" alt="">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                        <div><img src="./images/comments.png" alt=""> 10+</div>
+                        <div><img src="./images/share.png" alt=""> 53+</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/profile-pic.png" alt="">
+                        <div>
+                            <p>Shubham Date</p>
+                            <span>Feb 17 2022, 12:00 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                <img src="./images/feed-image-3.png" class="post-img" alt="">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                        <div><img src="./images/comments.png" alt=""> 10+</div>
+                        <div><img src="./images/share.png" alt=""> 53+</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/profile-pic.png" alt="">
+                        <div>
+                            <p>Shubham Date</p>
+                            <span>Feb 17 2022, 12:00 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                <img src="./images/feed-image-4.png" class="post-img" alt="">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                        <div><img src="./images/comments.png" alt=""> 10+</div>
+                        <div><img src="./images/share.png" alt=""> 53+</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    -->
+
+    <!--
+        /* making of main content */
+.story-gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.story{
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.story img{
+    position: absolute;
+    width: 50px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+}
+
+.story p{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.story1{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(./images/status-1.png);
+}
+.story2{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(./images/status-2.png);
+}
+.story3{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(./images/status-3.png);
+}
+.story4{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(./images/status-4.png);
+}
+.story5{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(./images/status-5.png);
+}
+
+.story.story1 img{
+    top: unset;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+.write-post-container{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #626262;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile p{
+    font-weight: 600;
+    color: #626262;
+}
+
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-input-container{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.post-input-container textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+.add-post-links{
+    display: flex;
+    margin-top: 10px;
+}
+
+.add-post-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+.add-post-links a img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.post-container{
+    width: 100%;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0;
+}
+
+.user-profile span{
+    font-size: 12px;
+    color: #9a9a9a;
+}
+
+.post-text{
+    color: #9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.post-text a{
+    color: #1876f2;
+    text-decoration: none;
+}
+
+.post-img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.activity-icons div img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.post-profile-icon{
+    display: flex;
+    align-items: center;
+}
+
+.post-profile-icon img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+.post-row a{
+    color: #9a9a9a;
+}
+    -->
+    step7)creating footer 
+    <!--
+        
+ <div class="footer">
+        <p>Copyright 2023 - Shubhaaam.com</p>
+    </div>
+
+    /* footer */
+.footer{
+    text-align: center;
+    color: #1876f2;
+    padding: 10px ;
+}
+    -->
+
+    step8)making of see your profile 
+    <!--
+        <nav>
+        <div class="n-left">
+            <img src="./images/logo.png" class="logo" alt="">
+            <ul>
+                <li><img src="./images/notification.png" alt=""></li>
+                <li><img src="./images/inbox.png" alt=""></li>
+                <li><img src="./images/video.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="n-right">
+            <div class="search-box">
+                <img src="./images/search.png" alt="">
+                <input type="text" name="Search" placeholder="Search...">
+            </div>
+            <div class="n-usericon online" onclick="settingsMenuToggle()">
+                <img src="./images/profile-pic.png" alt="">
+            </div>
+        </div>
+        
+        <div class="settings-menu">
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Shubham Date</p>
+                        <a href="#">See Your Profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="./images/feedback.png" alt="">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to imporove the new Design</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="./images/setting.png" class="settings-icon" alt="">
+                    <a href="#">Settings & Privacy</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/help.png" class="settings-icon" alt="">
+                    <a href="#">Help & Support</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/display.png" class="settings-icon" alt="">
+                    <a href="#">Display & Accesibility</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/logout.png" class="settings-icon" alt="">
+                    <a href="#">Logout</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+            </div>
+        </div>
+    </nav>
+    -->
+    <!--
+.settings-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    /* height: 500px; */
+    background-color: #fff;
+    box-shadow:  0  0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    top: 110%;
+    right: 5%;
+
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.settings-menu-heights{
+    max-height: 450px;
+}
+
+.user-profile a{
+    font-size: 14px;
+    color: #1876f2;
+    text-decoration: none;
+}
+
+.settings-menu-inner{
+    padding: 20px;
+}
+
+.settings-menu hr{
+    border: 0;
+    height: 1px;
+    background-color: #9a9a9a;
+    margin: 15px;
+}
+
+.settings-links{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.settings-links .settings-icon{
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.settings-links a{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #9a9a9a;
+}
+    -->
+    <!--
+        var settingsMenu = document.querySelector(".settings-menu")
+function settingsMenuToggle(){
+    settingsMenu.classList.toggle("settings-menu-heights")
+ }
+    -->
+
+    step9)creating darkbtn for toogling 
+    and storing that darktheme in local storage so that we dont wantto get once aging light theme after reloading 
+    <!--
+        <div class="settings-menu">
+
+            <div id="dark-btn" class="darkbtnon">
+                <span></span>
+            </div>
+    -->
+
+    <!--
+        
+:root{
+    --bc:#efefef;
+    --nc:#1876f2;
+    --bgc:#fff;
+}
+
+.dark-theme{
+    --bc:#0a0a0a;
+    --nc:#000;
+    --bgc:#000;
+}
+    -->
+
+    <!--
+        var settingsMenu = document.querySelector(".settings-menu")
+function settingsMenuToggle(){
+    settingsMenu.classList.toggle("settings-menu-heights")
+}
+
+
+var darkBtn = document.getElementById("dark-btn")
+darkBtn.onclick = function(){
+    darkBtn.classList.toggle("darkbtnon")
+
+    document.body.classList.toggle("dark-theme")
+
+    if(localStorage.getItem("theme") == "light"){
+        localStorage.setItem("theme","dark")
+    }
+    else{
+        localStorage.setItem("theme","light")
+    }
+}
+
+if(localStorage.getItem("theme") == "light"){
+    darkBtn.classList.remove("darkbtnon")
+    document.body.classList.remove("dark-theme")
+}
+else if(localStorage.getItem("theme") == "dark"){
+    darkBtn.classList.add("darkbtnon")
+    document.body.classList.add("dark-theme")
+}
+else{
+    localStorage.setItem("theme","light")
+}
+    -->
+
+
+    step9)making of profile section 
+    copy navbar from index.html
+    <!--
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    
+    <nav>
+        <div class="n-left">
+            <a href="./index.html"><img src="./images/logo.png" class="logo" alt="" ></a>
+            <ul>
+                <li><img src="./images/notification.png" alt=""></li>
+                <li><img src="./images/inbox.png" alt=""></li>
+                <li><img src="./images/video.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="n-right">
+            <div class="search-box">
+                <img src="./images/search.png" alt="">
+                <input type="text" name="Search" placeholder="Search...">
+            </div>
+            <div class="n-usericon online" onclick="settingsMenuToggle()">
+                <img src="./images/profile-pic.png" alt="">
+            </div>
+        </div>
+        
+        <div class="settings-menu">
+
+            <div id="dark-btn" class="darkbtnon">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Shubham Date</p>
+                        <a href="#">See Your Profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="./images/feedback.png" alt="">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to imporove the new Design</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="./images/setting.png" class="settings-icon" alt="">
+                    <a href="#">Settings & Privacy</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/help.png" class="settings-icon" alt="">
+                    <a href="#">Help & Support</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/display.png" class="settings-icon" alt="">
+                    <a href="#">Display & Accesibility</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="./images/logout.png" class="settings-icon" alt="">
+                    <a href="#">Logout</a><img src="./images/arrow.png" alt="" width="10px">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="p-container">
+        <img src="./images/cover.png" class="coverimg" alt="">
+        <div class="p-details">
+            <div class="pd-left">
+                <div class="pd-row">
+                    <img src="./images/photo1.png" alt="" class="pdimage">
+                    <div>
+                        <h3>Shuhbham Date</h3>
+                        <p>100+ Friends - 5 Mutual</p>
+                        <img src="./images/member-1.png" alt="">
+                        <img src="./images/member-2.png" alt="">
+                        <img src="./images/member-3.png" alt="">
+                        <img src="./images/member-4.png" alt="">
+                        <img src="./images/member-5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pd-right">
+                <button type="button"><img src="./images/add-friends.png" alt=""> Friend</button>
+                <button type="button"><img src="./images/message.png" alt=""> Message</button>
+                <br>
+                <a href="#"><img src="./images/more.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="p-info">
+            <div class="infocol">
+                <div class="p-intro">
+                    <h3>Introduction</h3>
+                    <p>Hellooo..... <img src="./images/feeling.png" alt=""></p>
+                    <hr>
+
+                    <ul>
+                        <li><img src="./images/profile-job.png" alt=""> Student at University</li>
+                        <li><img src="./images/profile-study.png" alt=""> Studying at Mumbai University</li>
+                        <li><img src="./images/profile-home.png" alt=""> Lives in Mumbai, India</li>
+                    </ul>
+                </div>
+
+                <div class="p-intro">
+                    <div class="tbox">
+                        <h3>Photos</h3>
+                        <a href="#">All Images</a>
+                    </div>
+
+                    <div class="photosbox">
+                        <div><img src="./images//photo1.png" alt=""></div>
+                        <div><img src="./images//photo2.png" alt=""></div>
+                        <div><img src="./images//photo3.png" alt=""></div>
+                        <div><img src="./images//photo4.png" alt=""></div>
+                        <div><img src="./images//photo5.png" alt=""></div>
+                        <div><img src="./images//photo6.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="p-intro">
+                    <div class="tbox">
+                        <h3>Friends</h3>
+                        <a href="#">All Friends</a>
+                    </div>
+                    <p>100+ Friends - 5 Mutual</p>
+
+                    <div class="friendsbox">
+                        <div><img src="./images//member-1.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-2.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-3.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-4.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-5.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-6.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-7.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-8.png" alt=""><p>Unknown</p></div>
+                        <div><img src="./images//member-9.png" alt=""><p>Unknown</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postcol">
+
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <img src="./images/profile-pic.png" alt="">
+                        <div>
+                            <p>Shubham Date</p>
+                            <small>Public <i class="fas fa-caret-down"></i></small>
+                        </div>
+                    </div>
+                    <div class="post-input-container">
+                        <textarea placeholder="What's on your mind, Shubham...?" rows="3"></textarea>
+                        <div class="add-post-links">
+                            <a href="#"><img src="./images/live-video.png" alt=""> Video</a>
+                            <a href="#"><img src="./images/photo.png" alt=""> Photo</a>
+                            <a href="#"><img src="./images/feeling.png" alt=""> Feelings</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="./images/profile-pic.png" alt="">
+                            <div>
+                                <p>Shubham Date</p>
+                                <span>Feb 17 2022, 12:00 pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                    </div>
+                    
+                    <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                    <img src="./images/feed-image-1.png" class="post-img" alt="">
+    
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                            <div><img src="./images/comments.png" alt=""> 10+</div>
+                            <div><img src="./images/share.png" alt=""> 53+</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="./images/profile-pic.png" alt="">
+                            <div>
+                                <p>Shubham Date</p>
+                                <span>Feb 17 2022, 12:00 pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                    </div>
+                    
+                    <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                    <img src="./images/feed-image-2.png" class="post-img" alt="">
+    
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                            <div><img src="./images/comments.png" alt=""> 10+</div>
+                            <div><img src="./images/share.png" alt=""> 53+</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="./images/profile-pic.png" alt="">
+                            <div>
+                                <p>Shubham Date</p>
+                                <span>Feb 17 2022, 12:00 pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                    </div>
+                    
+                    <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                    <img src="./images/feed-image-3.png" class="post-img" alt="">
+    
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                            <div><img src="./images/comments.png" alt=""> 10+</div>
+                            <div><img src="./images/share.png" alt=""> 53+</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="./images/profile-pic.png" alt="">
+                            <div>
+                                <p>Shubham Date</p>
+                                <span>Feb 17 2022, 12:00 pm</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipis-v"></i></a>
+                    </div>
+                    
+                    <p class="post-text">Subscribe US...! <br/> <a href="#">#Shubhaaam.com</a> <a href="#">#Subscribe</a></p>
+                    <img src="./images/feed-image-4.png" class="post-img" alt="">
+    
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="./images/like-blue.png" alt=""> 100+</div>
+                            <div><img src="./images/comments.png" alt=""> 10+</div>
+                            <div><img src="./images/share.png" alt=""> 53+</div>
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="./images/profile-pic.png" alt=""><i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="loadmore">Load More</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+   footer
+    <div class="footer">
+        <p>Copyright 2023 - Shubhaaam.com</p>
+    </div> 
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>-->
+
+<!--
+    .p-container{
+    padding: 20px 15%;
+    color: #626262;
+}
+
+.coverimg{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.p-details{
+    background-color: var(--bgc);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.pd-row{
+    display: flex;
+    align-items: flex-start;
+}
+
+.pdimage{
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.pd-row div h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pd-row div p{
+    font-size: 15px;
+}
+
+.pd-row div img{
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.pd-right button{
+    background: var(--nc);
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.pd-right button:first-child{
+    background: #9a9a9a;
+}
+
+.pd-right button img{
+    height: 15px;
+    margin-right: 10px;
+}
+
+.pd-right{
+    text-align: right;
+}
+
+.pd-right a{
+    background: #9a9a9a;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+.pd-right a img{
+    width: 20px;
+}
+
+.p-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.infocol{
+    flex-basis: 33%;
+}
+
+.postcol{
+    flex-basis: 65%;
+}
+
+.p-intro{
+    background: var(--bgc);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.p-intro h3{
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.p-intro p img{
+    width: 20px;
+    margin-bottom: -3px;
+}
+
+.p-intro hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin-top: 10px;
+}
+.p-intro ul li{
+    list-style-type: none;
+    font-size: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.p-intro ul li img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.tbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tbox a{
+    text-decoration: none;
+    color: var(--nc);
+}
+
+.photosbox{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.photosbox div img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.p-intro p{
+    font-size: 15px;
+}
+
+.friendsbox{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.friendsbox div img{
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+-->
+    
+
+    
+    
+
+
+    
+
+    
+
+    
+    
+</body>
+</html>
